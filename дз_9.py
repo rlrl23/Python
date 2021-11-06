@@ -1,23 +1,16 @@
-#1Светофор
+# 1Светофор
 import time
-
 class TrafficLight:
-    __color = 'красный'
+    def __init__(self):
+        self.__color = {'Красный': 7, 'Желтый': 2, 'Зеленый': 5}
 
     def running(self):
-        print(self.__color)
-        self.__color = 'желтый'
-        time.sleep(7)
-        print(self.__color)
-        self.__color = 'зеленый'
-        time.sleep(2)
-        print(self.__color)
-        time.sleep(5)
+        for color, sec in self.__color.items():
+            print(f'{color}, подождите {sec}с')
+            time.sleep(sec)
 
 a = TrafficLight()
 a.running()
-d = TrafficLight()
-d.running()
 
 #2
 class Road:
