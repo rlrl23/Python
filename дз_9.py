@@ -27,7 +27,7 @@ class Road:
         self._width= width
 
     def mass(self, weight, thick):
-        mass = self._length*self._width*weight*thick
+        mass = self._length*self._width*weight*thick/1000
         print(f'Масса асфальта для покрытия дороги = {mass} т.')
 
 a = Road(200, 300)
